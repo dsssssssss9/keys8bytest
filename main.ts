@@ -1,0 +1,11 @@
+led.enable(false)
+let strip = neopixel.create(DigitalPin.P3, 32, NeoPixelMode.RGB)
+strip.setBrightness(32)
+strip.clear()
+strip.show()
+strip.showRainbow(1, 360)
+strip.show()
+basic.forever(function () {
+    strip.rotate(1)
+    strip.show()
+})
